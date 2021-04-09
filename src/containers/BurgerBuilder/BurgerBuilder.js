@@ -128,7 +128,7 @@ class BurgerBuilder extends Component {
             });
 
 
-
+        this.props.history.push('/checkout');
     }
 
     render() {
