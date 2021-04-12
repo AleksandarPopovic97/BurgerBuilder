@@ -2,7 +2,7 @@ import Layout from './hoc/Layout/Layout';
 import React, { Component } from 'react';
 import BurgerBuilder from './containers/BurgerBuilder/BurgerBuilder';
 import Checkout from './containers/Checkout/Checkout';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { HashRouter, Route, Switch } from 'react-router-dom';
 import Orders from './containers/Checkout/Orders/Orders';
 class App extends Component {
 
@@ -10,7 +10,7 @@ class App extends Component {
 
     return (
       <div className="App">
-        <BrowserRouter>
+        <HashRouter>
           <Layout>
             <Switch>
               <Route path="/checkout" component={Checkout} />
@@ -18,7 +18,7 @@ class App extends Component {
               <Route path="/" exact component={BurgerBuilder} />
             </Switch>
           </Layout>
-        </BrowserRouter>
+        </HashRouter>
       </div>
     );
   }
